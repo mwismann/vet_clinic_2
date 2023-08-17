@@ -40,6 +40,7 @@ SELECT *
 FROM animals
 WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
+
 BEGIN; -- Begin transaction
 UPDATE animals
 SET species = 'unspecified'; -- Make changes
@@ -79,6 +80,7 @@ COMMIT;
 
 SELECT * FROM animals;
 
+
 -- How many animals are there?
 SELECT COUNT(*) FROM animals;
 
@@ -96,3 +98,49 @@ SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 
 -- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+
+
+-- What animals belong to Melody Pond?
+SELECT animals.name
+FROM animals INNER JOIN owners
+ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Melody Pond';
+
+-- List of all animals that are pokemon (their type is Pokemon).
+SELECT animals.name
+FROM animals INNER JOIN species
+ON animals.species_id = species.id
+WHERE species.name = 'Pokemon';
+
+-- List all owners and their animals, remember to include those that don't own any animal.
+SELECT owners.full_name, animals.name
+FROM owners LEFT JOIN animals
+ON owners.id = animals.owner_id;
+
+-- How many animals are there per species?
+SELECT species.name, COUNT(animals.name)
+FROM species LEFT JOIN animals
+ON species.id = animals.species_id
+GROUP BY species.name;
+
+-- List all Digimon owned by Jennifer Orwell.
+SELECT animals.name, species.name, owners.full_name
+FROM animals INNER JOIN owners
+ON animals.owner_id = owners.id INNER JOIN species
+ON animals.species_id = species.id
+WHERE owners.full_name = 'Jennifer Orwell'
+AND species.name = 'Digimon';
+
+-- List all animals owned by Dean Winchester that haven't tried to escape.
+SELECT animals.name, animals.escape_attempts, owners.full_name
+FROM animals INNER JOIN owners
+ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Dean Winchester'
+AND animals.escape_attempts = 0;
+
+-- Who owns the most animals?
+SELECT owners.full_name, COUNT(animals.name)
+FROM owners LEFT JOIN animals
+ON owners.id = animals.owner_id
+GROUP BY owners.full_name
+ORDER BY count DESC;
