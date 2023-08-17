@@ -143,4 +143,5 @@ SELECT owners.full_name, COUNT(animals.name)
 FROM owners LEFT JOIN animals
 ON owners.id = animals.owner_id
 GROUP BY owners.full_name
-ORDER BY count DESC;
+ORDER BY COUNT(*) DESC
+LIMIT 1;
