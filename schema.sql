@@ -41,3 +41,26 @@ ADD COLUMN species_id INT REFERENCES species(id);
 -- Modify animals table as follows: Add a column called owner_id which references the id column of the owners table.
 ALTER TABLE animals
 ADD COLUMN owner_id INT REFERENCES owners(id);
+
+-- Create a table named vets with the following columns:
+CREATE TABLE vets (
+	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	name VARCHAR(200) NOT NULL,
+	age INT NOT NULL,
+	date_of_graduation DATE NOT NULL
+)
+
+-- Create a join table called specializations:
+CREATE TABLE specializations (
+	id INT GENERATED ALWAYS AS IDENTITY,
+	vet_id INT REFERENCES vets(id),
+	species_id INT REFERENCES species(id)
+)
+
+-- Create a join table called visits:
+CREATE TABLE visits (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animal_id INT REFERENCES animals(id),
+  vet_id INT REFERENCES vets(id),
+  date_of_visit DATE NOT NULL
+)

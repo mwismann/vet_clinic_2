@@ -4,7 +4,7 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
+- [📗 Table of Contents](#-table-of-contents)
 - [📖 \[vet_clinic_2\] ](#-vet_clinic_2-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -13,8 +13,6 @@
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [Install](#install)
-    - [Usage](#usage)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -57,9 +55,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Proper addition of animals table]**
-- **[Proper insertion of animal data into table]**
-- **[Diversification of queries in table]**
+- **[Multiple tables]**
+- **[Proper implementation of one-to-many and many-to-many relations]**
+- **[Diversification of queries in each table]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,23 +88,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```bash
-  git clone git@github.com:mwismann/vet-clinic-database.git
-```
-
-### Install
-
-Install this project dependencies with:
-
-```bash
-  npm install
-```
-
-### Usage
-
-To run the project, execute the following command:
-
-```bash
-  npm run start
+  git clone git@github.com:mwismann/vet_clinic_2.git
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -126,8 +108,6 @@ To run the project, execute the following command:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Implementation of transactions to update records]**
 - [ ] **[Implementation of transactions to delete records]**
