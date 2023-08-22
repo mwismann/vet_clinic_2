@@ -105,15 +105,22 @@ Clone this repository to your desired folder:
 - Twitter: [@mathias_wismann](https://twitter.com/mathias_wismann)
 - LinkedIn: [Mathias Wismann](https://www.linkedin.com/in/mathias-wismann/)
 
+👤 **Arthur Emanuel G. Iturres**
+
+- GitHub: [@ITurres](https://github.com/ITurres)
+- LinkedIn: [Arthur Emanuel G. Iturres](https://www.linkedin.com/in/arturoemanuelguerraiturres/)
+- Angellist / Wellfound: [Arturo (Arthur) Emanuel Guerra Iturres](https://wellfound.com/u/arturo-arthur-emanuel-guerra-iturres)
+- Youtube: [Arturo Emanuel Guerra Iturres - Youtube Channel](https://www.youtube.com/channel/UC6GFUFHOtBS9mOuI8EJ6q4g)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Implementation of transactions to update records]**
-- [ ] **[Implementation of transactions to delete records]**
-- [ ] **[Addition of ux interface]**
+- [x] **[Implementation of transactions to update records]**
+- [x] **[Implementation of indexes for performance audit]**
+- [ ] **[Create an schema based on a diagram]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
