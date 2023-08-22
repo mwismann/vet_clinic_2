@@ -26,6 +26,8 @@
 
 **[vet_clinic_2]** is a project where I created the initial structure for a vet clinic with the implementation of a relational database. I created a table to store animals' information, insert data into it, and query it.
 
+<img src='/schema-diagram.png' width='100%' alt='Schema Diagram'>
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
