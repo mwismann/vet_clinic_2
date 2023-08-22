@@ -72,4 +72,4 @@ CREATE INDEX ix_visit_animal ON visits (animal_id);
 
 CREATE INDEX ix_visits ON visits (vet_id, id, animal_id, date_of_visit);
 
-CREATE INDEX ix_visits ON visits (vet_id, id, animal_id, date_of_visit);
+CREATE INDEX ix_owner_email ON owners (email);
